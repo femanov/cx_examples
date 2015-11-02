@@ -1,1 +1,4 @@
 dev MSG noop w10t1024 -
+dev modectl noop w10i1 -
+cpoint modectl.cmd msg.0
+cpoint modectl.res msg.1
