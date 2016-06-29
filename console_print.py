@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import pycx4.pycda as cda
+import pycx4.scheduler as sl
 
 import signal
 signal.signal(signal.SIGINT, signal.SIG_DFL)
@@ -11,4 +12,4 @@ def printval(chan):
 chan = cda.schan("localhost:1.name.0")
 chan.valueMeasured.connect(printval)
 
-cda.py_sl_main_loop()
+sl.main_loop()
