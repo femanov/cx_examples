@@ -24,7 +24,7 @@ t0 = time.time()
 
 app = QtCore.QCoreApplication(sys.argv)
 
-context = cda.cda_context("localhost:1.NAME")
+context = cda.Context("localhost:1.NAME")
 chans = []
 
 for x in range(nchans):

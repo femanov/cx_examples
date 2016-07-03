@@ -17,19 +17,19 @@ def printval(chan):
         t2 = time.time()
         print 'time1 = %f ' % (t1-t0)
         print "time2 = %f " % (t2-t1)
-        cda.py_sl_break()
+        cda.break_()
 
 t0 = time.time()
 
-context = cda.cda_context("localhost:2.NAME")
+context = cda.Context("localhost:2.NAME")
 
 chans = []
 
 for x in range(nchans):
-    chans.append(cda.vchan("%d" % x, context, cda.PY_CXDTYPE_DOUBLE, 1000000))
+    chans.append(cda.vchan("%d" % x, context, cda.CXDTYPE_DOUBLE, 1000000))
     chans[-1].valueMeasured.connect(printval)
 
 
 t1 = time.time()
 
-cda.py_sl_main_loop()
+cda.main_loop()

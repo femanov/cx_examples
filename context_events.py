@@ -10,11 +10,11 @@ def print_event(cont):
     print(cont)
 
 
-context = cda.cda_context("localhost:1.NAME")
+context = cda.Context("localhost:1.NAME")
 context.serverCycle.connect(print_event)
 context.enable_serverCycle()
 
 # no chans - no context events :-)
 c = cda.sdchan("%d" % 0, context)
 
-cda.py_sl_main_loop()
+cda.main_loop()

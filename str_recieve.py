@@ -12,4 +12,4 @@ def printval(chan):
 text_c = cda.strchan("localhost:0.msg.1")
 text_c.valueMeasured.connect(printval)
 
-cda.py_sl_main_loop()
+cda.main_loop()

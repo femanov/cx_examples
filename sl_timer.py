@@ -9,7 +9,7 @@ def print_t(timer):
     print("time out")
 
 
-t = cda.SlTimer(1000000, 1)
+t = cda.Timer(1000000, 1)
 t.shot.connect(print_t)
 
-cda.py_sl_main_loop()
+cda.main_loop()
