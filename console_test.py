@@ -27,7 +27,7 @@ context = cda.Context("localhost:1.NAME")
 chans = []
 
 for x in range(nchans):
-    chans.append(cda.sdchan("%d" % x, context))
+    chans.append(cda.DChan("%d" % x, context))
 
 for x in chans:
     x.valueChanged.connect(printval)

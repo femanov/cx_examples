@@ -9,7 +9,7 @@ def printval(chan):
     print chan.val
 
 
-text_c = cda.strchan("localhost:0.msg.1")
+text_c = cda.StrChan("localhost:0.msg.1")
 text_c.valueMeasured.connect(printval)
 
 cda.main_loop()

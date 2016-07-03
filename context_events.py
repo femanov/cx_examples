@@ -15,6 +15,6 @@ context.serverCycle.connect(print_event)
 context.enable_serverCycle()
 
 # no chans - no context events :-)
-c = cda.sdchan("%d" % 0, context)
+c = cda.DChan("%d" % 0, context)
 
 cda.main_loop()

@@ -26,7 +26,7 @@ context = cda.Context("localhost:2.NAME")
 chans = []
 
 for x in range(nchans):
-    chans.append(cda.vchan("%d" % x, context, cda.CXDTYPE_DOUBLE, 1000000))
+    chans.append(cda.VChan("%d" % x, context, cda.CXDTYPE_DOUBLE, 1000000))
     chans[-1].valueMeasured.connect(printval)
 
 

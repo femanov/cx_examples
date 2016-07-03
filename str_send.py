@@ -9,7 +9,7 @@ signal.signal(signal.SIGINT, signal.SIG_DFL)
 def sendval(chan):
     chan.setValue("hello world!".encode("ascii"))
 
-text_c = cda.strchan("localhost:0.msg.1")
+text_c = cda.StrChan("localhost:0.msg.1")
 text_c.valueMeasured.connect(sendval)
 text_c.setValue("hello world".encode("ascii"))
 
