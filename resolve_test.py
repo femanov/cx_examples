@@ -9,7 +9,7 @@ signal.signal(signal.SIGINT, signal.SIG_DFL)
 # get "channel unresolved" event.
 # if channel unresolved - message will be printed and event will be send
 # to user
-chan = cda.Chan("ichw1-2:0.pwa1.pa1ccc")
+chan = cda.Chan("localhost:0.ql1.gset")
 
 
 cda.main_loop()
