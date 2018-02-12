@@ -3,7 +3,8 @@
 import time
 import sys
 from PyQt4 import QtCore
-import pycx4.qcda as cda
+
+from pycx4.qcda import cda
 import signal
 
 signal.signal(signal.SIGINT, signal.SIG_DFL)
