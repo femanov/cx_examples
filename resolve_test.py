@@ -1,15 +1,19 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import pycx4.pycda as cda
 
 import signal
 signal.signal(signal.SIGINT, signal.SIG_DFL)
 
-# try to register not existing channel in existing server to
-# get "channel unresolved" event.
-# if channel unresolved - message will be printed and event will be send
-# to user
-chan = cda.Chan("localhost:0.ql1.gset")
+def print_rslv(chan):
+    print(chan.name, chan.rslv_str)
 
+def print_val(chan):
+    print(chan.name, chan.val, chan.rslv_str)
+
+
+chan = cda.DChan('canhw:11.QL1.Iset')
+chan.resolve.connect(print_rslv)
+chan.valueMeasured.connect(print_val)
 
 cda.main_loop()
