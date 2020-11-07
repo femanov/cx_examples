@@ -9,7 +9,7 @@ signal.signal(signal.SIGINT, signal.SIG_DFL)
 def printval(chan):
     print(chan.val)
 
-chan = cda.Chan("canhw:13.S13_out.Imes")
+chan = cda.Chan("canhw:21.ring_current")
 chan.valueMeasured.connect(printval)
 
 cda.main_loop()
