@@ -9,8 +9,9 @@ def print_t():
     print("time out")
 
 
-t = cda.Timer(1000)
+t = cda.Timer(1000)  # create timer instance
 t.start()
+
 t.timeout.connect(print_t)
 
 
